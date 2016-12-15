@@ -87,8 +87,6 @@
 
 
 
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5851073d860d4327"></script>
-
 
 
     <script>
@@ -296,15 +294,6 @@
       <time datetime="2016-12-13T06:21:22.356Z" itemprop="datePublished">2016-12-13</time>
 </a>
 
- 
-    <a href="/2016/12/13/hello-world/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-            <span class="ds-thread-count" ></span>
-        
-        
-    </a>
 
     </div>
   
@@ -399,9 +388,21 @@
     
 <div class="share">
     
-
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Hello World　| WJ's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
-        <div class="addthis_sharing_toolbox"></div>
+
     
 </div>
 
@@ -412,33 +413,13 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/13/hello-world/" data-title="Hello World" data-url="http://windback.xyz/2016/12/13/hello-world/"></div>
+        <section class="youyan" id="comments">
     <script>
-        var duoshuoQuery = {short_name:"wsj"};
         var loadComment = function(){
             var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2121802';
             (d.head || d.body).appendChild(s);
         }
-
-        
-            // Add comment count
-            $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=wsj&threads=2016/12/13/hello-world/&callback=?";
-                $.getJSON(jsonUrl, function(result){
-                    $.each(result.response, function(i, field){
-                        var value = field.comments;
-                        if (value > 0) {
-                            $(".count-comment").text(value);
-                            return;
-                        }
-                    })
-                })
-            })
-        
     </script>
     
     <aside class="comment-bar">
@@ -466,7 +447,8 @@
         }
     </script>
 
-</div>
+    <div id="uyan_frame"></div>
+</section>
     
 
 
