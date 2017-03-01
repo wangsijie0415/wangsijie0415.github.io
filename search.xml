@@ -31,8 +31,7 @@ Data binding 的布局文件与传统布局文件有一点不同。它以一个 
 <h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>本部分源码请参考 DataBindingDemo -&gt; EventActivity 部分。</p>
 <p>类似于 android:onClick 可以指定 Activity 中的函数，Data Binding 也允许处理从视图中发送的事件。</p>
 <p>有两种实现方式：<br>  方法调用监听绑定<br>二者主要区别在于方法调用在编译时处理，而监听绑定于事件发生时处理。</p>
-<p>###方法调用</p>
-<p>相较于 android:onClick ，它的优势在于表达式会在编译时处理，如果函数不存在或者函数签名不对，编译将会报错。</p>
+<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><p>相较于 android:onClick ，它的优势在于表达式会在编译时处理，如果函数不存在或者函数签名不对，编译将会报错。</p>
 <p>以下是个例子：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class EventHandler &#123;</div><div class="line">    private Context mContext;</div><div class="line">    public EventHandler(Context context) &#123;</div><div class="line">        mContext = context;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void onClickFriend(View view) &#123;</div><div class="line">        Toast.makeText(mContext, <span class="string">"onClickFriend"</span>, Toast.LENGTH_LONG).show();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>表达式如下：</p>
